@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend Movie</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/front.css">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .navbar-brand img {
+            height: 40px;
+        }
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+        .card-cover {
+            transition: transform 0.3s;
+        }
+        .card-cover:hover {
+            transform: scale(1.05);
+        }
+        .footer-social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+        .footer-social a:hover {
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body> 
+    <!-- START HEADER -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Action.html">Action</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Drama.html">Drama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Romantic.html">Romantic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Adventure.html">Adventure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Fantasy.html">Fantasy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Horror.html">Horror</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </header>    
+    <!-- END HEADER -->
+
+    <!-- START HERO -->
+    <div class="position-relative overflow-hidden text-center bg-dark d-flex align-items-center justify-content-center" 
+        style="color: white; background-image: url('img/56161e71-67a9-4b93-a387-d5ab720f18e1.jpg'); background-size: cover; background-position: center; height: 60vh;">
+        <div class="hero-overlay"></div>
+            <div class="container py-5 hero-content">
+        <h1 class="display-3 fw-bold">Recommend Movie</h1>
+        <p class="lead">แนะนำหนังคุณภาพที่คุณไม่ควรพลาด พบกับหนังหลากหลายแนวที่เลือกสรรมาอย่างดีเพื่อคุณ</p>
+            </div>
+        </div>
+    <!-- END HERO -->
+
+    <!-- START Carousel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 1000px;"> <!-- Adjusted height -->
+                <img src="img/real.png" class="d-block w-100 h-100" alt="Warz" style="object-fit: cover;"> <!-- Ensures image covers entire container -->
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item" style="height: 1000px;"> <!-- Adjusted height -->
+                <img src="img/stranger.png" class="d-block w-100 h-100" alt="Stranger" style="object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item" style="height: 1000px;"> <!-- Adjusted height -->
+                <img src="img/rise.png" class="d-block w-100 h-100" alt="Rise" style="object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">ย้อนกลับ</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">ถัดไป</span>
+        </button>
+    </div>    
+    <!-- END Carousel -->
+
+    <!-- START FEATURE -->
+    <div class="container-fluid py-5" style="background-image: url('img/dark_background_2-wallpaper-960x640.jpg'); background-size: cover; background-position: center;">
+        <h2 class="text-center text-white mb-4">หมวดหมู่หนัง</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Action -->
+            <div class= "col">
+                <a href="Action.html" class="text-decoration-none">
+                    <div class="card-hover text-bg-dark rounded-4 shadow-lg" 
+                         style="background-image: url('img/moneygif.gif'); background-position: center; background-size: cover; height: 300px; max-width: 550px; margin: 0 auto;">
+                        <div class="d-flex align-items-end h-100 p-5">
+                            <h5 class="card-title text-white">Action</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>            
+            <!-- Adventure -->
+            <div class="col">
+                <a href="Adventure.html" class="text-decoration-none">
+                <div class="card-hover text-bg-dark rounded-4 shadow-lg" 
+                     style="background-image: url('img/jurasic.png'); background-position: center; background-size: cover; height: 300px; max-width: 550px; margin: 0 auto;">
+                    <div class="d-flex align-items-end h-100 p-5">
+                        <h5 class="card-title text-white">Adventure</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <!-- Fantasy -->
+            <div class="col">
+                <a href="Fantasy.html" class="text-decoration-none">
+                <div class="card-hover text-bg-dark rounded-4 shadow-lg" 
+                     style="background-image: url('img/harry.png'); background-position: center; background-size: cover; height: 300px; max-width: 550px; margin: 0 auto;">
+                    <div class="d-flex align-items-end h-100 p-5">
+                        <h5 class="card-title text-white">Fantasy</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <!-- Horror -->
+            <div class="col">
+                <a href="Horror.html" class="text-decoration-none">
+                <div class="card-hover text-bg-dark rounded-4 shadow-lg" 
+                     style="background-image: url('img/thenan.png'); background-position: center; background-size: cover; height: 300px; max-width: 550px; margin: 0 auto;">
+                    <div class="d-flex align-items-end h-100 p-5">
+                        <h5 class="card-title text-white">Horror</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- Drama -->
+            <div class="col">
+                <a href="Drama.html" class="text-decoration-none">
+                <div class="card-hover text-bg-dark rounded-4 shadow-lg" 
+                     style="background-image: url('img/family.png'); background-position: center; background-size: cover; height: 300px; max-width: 550px; margin: 0 auto;">
+                    <div class="d-flex align-items-end h-100 p-5">
+                        <h5 class="card-title text-white">Drama</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- Romance -->
+            <div class="col">
+                <a href="Romantic.html" class="text-decoration-none">
+                <div class="card-hover text-bg-dark rounded-4 shadow-lg" 
+                     style="background-image: url('img/blue.png'); background-position: center; background-size: cover; height: 300px; max-width: 550px; margin: 0 auto;">
+                    <div class="d-flex align-items-end h-100 p-5">
+                        <h5 class="card-title text-white">Romantic</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+        }
+        .card-hover:hover {
+            transform: scale(1.05); /* Increase size slightly */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Add a deeper shadow */
+            filter: brightness(1.2); /* Brighten the background image */
+        }
+    </style>
+    <!-- END FEATURE -->
+
+    <!--START FOOTER-->
+    <footer class="text-center text-white py-4" style="background-color: #343a40; border-top: 1px solid #495057;">
+        <div class="container">
+            <ul class="nav justify-content-center mb-3">
+                <li class="nav-item">
+                    <a href="Action.html" class="nav-link px-3 text-white">Action</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Drama.html" class="nav-link px-3 text-white">Drama</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Romantic.html" class="nav-link px-3 text-white">Romantic</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Adventure.html" class="nav-link px-3 text-white">Adventure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Fantasy.html" class="nav-link px-3 text-white">Fantasy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Horror.html" class="nav-link px-3 text-white">Horror</a>
+                </li>
+            </ul>
+            <p class="mb-0 text-white">&copy; จัดทำโดย : นายภูริ ทองแท่น</p>
+        </div>
+    </footer>    
+    <!--END FOOTER-->
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'slide',
+            once: true
+        });
+    </script>
+</body>
+</html>
